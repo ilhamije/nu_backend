@@ -13,7 +13,7 @@ class Lapak(models.Model):
     related_url = models.CharField(max_length=200, blank=True)
     latitude = models.FloatField(blank=True, null=True)
     longitude = models.FloatField(blank=True, null=True)
-    additional_info = models.TextField(models.CharField(max_length=300), default=list, blank=True)
+    additional_info = models.CharField(max_length=300, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     # user = models.ForeignKey('authentication.CustomUser', related_name='listings', on_delete=models.CASCADE)

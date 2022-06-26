@@ -21,10 +21,10 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Provider Service Area API",
+      title="Nulungan API",
       default_version='v1',
-      description="Managing Provider User and Service Area",
-      contact=openapi.Contact(email="hei@niceday.xyz"),
+      description="Helping street vendor to survive in Pandemic + Post-pandemic Era.",
+      contact=openapi.Contact(email="ilhamije@gmail.com"),
       license=openapi.License(name="BSD License"),
    ),
    public=True,
