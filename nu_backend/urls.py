@@ -37,8 +37,7 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
-    path(os.getenv('SECRET_ADMIN_URL') + '/admin/', admin.site.urls),
-    path('admin/', admin.site.urls),
+    path(os.getenv('SECRET_ADMIN_URL') + 'admin/', admin.site.urls),
     path('v1/lapak/', include('lapaks.urls')),
     path('', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]
