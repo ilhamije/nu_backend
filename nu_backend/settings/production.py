@@ -17,7 +17,7 @@ ALLOWED_HOSTS = ['nu-services.herokuapp.com']
 #     }
 # }
 
-DATABASES['default'] = dj_database_url.config(default=os.environ.get('PROD_DB_URL'))
+DATABASES['default'] = dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 
 
 SECURE_SSL_REDIRECT = True
