@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import os
 from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
@@ -36,6 +37,7 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
+    path(os.getenv('SECRET_ADMIN_URL') + '/admin/', admin.site.urls),
     path('admin/', admin.site.urls),
     path('v1/lapak/', include('lapaks.urls')),
     path('', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
