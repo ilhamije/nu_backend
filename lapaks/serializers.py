@@ -3,7 +3,7 @@ from rest_framework import serializers
 from .models import Lapak
 
 
-class LapakSerializer(serializers.Serializer):
+class LapakSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Lapak
